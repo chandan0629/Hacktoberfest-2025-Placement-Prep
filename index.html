@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktoberfest 2025 Placement Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font as default */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7fa;
+            min-height: 100vh;
+        }
+        /* Style for primary link color */
+        .primary-link {
+            color: #ff8c00; /* Hacktoberfest orange */
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .primary-link:hover {
+            color: #d97706;
+            text-decoration: underline;
+        }
+        /* Custom card styling for the main content area */
+        .content-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
+        /* Markdown-like styling for content */
+        .markdown-content p, .markdown-content ul {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 0.5rem;
+        }
+        .markdown-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <!-- Main Application Container -->
+    <div id="app" class="max-w-4xl mx-auto">
+
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800">
+                Hacktoberfest 2025 Placement Prep
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">Ready to contribute and learn?</p>
+        </header>
+        
+        <!-- Content Area -->
+        <main id="content-container" class="content-card">
+            <!-- Content will be injected here by JavaScript -->
+        </main>
+
+    </div>
+
+    <script>
+        // --- Navigation and Content Management ---
+
+        const contentContainer = document.getElementById('content-container');
+
+        // Define all page contents as functions returning HTML strings
+        const pageContents = {
+            home: () => `
+                <div class="markdown-content">
+                    <p class="text-xl font-bold mb-4">Welcome to the Hacktoberfest 2025 Placement Prep repository!</p>
+                    
+                    <h2 class="text-2xl font-semibold text-gray-700">🎉 Hacktoberfest Participation</h2>
+                    <p>This project is participating in 
+                        <!-- UPDATED: Using standard <a> tag for external link to prevent popup blocking -->
+                        <a href="https://hacktoberfest.com/" target="_blank" class="primary-link">Hacktoberfest!</a>
+                        All contributions are welcome. Please read the guidelines below to get started.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">🚀 How to Contribute</h2>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Fork the repository</li>
+                        <li>Clone your fork</li>
+                        <li>Create a branch</li>
+                        <li>Make your changes</li>
+                        <li>Commit and push</li>
+                        <li>Create a Pull Request</li>
+                    </ul>
+                    <p>See 
+                        <span id="contributing-link" class="primary-link">CONTRIBUTING.md</span> 
+                        for detailed instructions.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">🏷️ Issues</h2>
+                    <p>Issues marked with <code class="bg-gray-100 p-1 rounded">good first issue</code> and 
+                        <code class="bg-gray-100 p-1 rounded">hacktoberfest</code> are great for beginners!
+                    </p>
+                    <p>Feel free to open new issues for bugs, features, or improvements.</p>
+                    
+                    <h2 class="text-2xl font-semibold text-gray-700">💡 Project Overview</h2>
+                    <p>This repository is designed to help you prepare for coding interviews and technical placements. It includes challenges, resources, and project suggestions.</p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">📜 License</h2>
+                    <p>MIT License. See 
+                        <!-- UPDATED: Using standard <a> tag for external link to prevent popup blocking -->
+                        <a href="https://github.com/chandan0629/Hacktoberfest-2025-Placement-Prep/blob/main/LICENSE" target="_blank" class="primary-link">LICENSE</a>.
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-700">🤝 Code of Conduct</h2>
+                    <p>Please be respectful and follow our 
+                        <span id="coc-link" class="primary-link">Code of Conduct</span>.
+                    </p>
+
+                    <p class="text-center text-2xl mt-8 font-bold text-yellow-600">Happy Coding! 🌟</p>
+                </div>
+            `,
+
+            contributing: () => `
+                <div class="markdown-content">
+                    <h1 class="text-3xl font-bold mb-4 text-gray-800">Contributing Guide</h1>
+                    <button onclick="renderPage('home')" class="mb-4 text-sm primary-link flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                        Back to Home
+                    </button>
+                    
+                    <h2 class="text-xl font-semibold text-gray-700">Thank you for considering contributing! Here’s how you can help:</h2>
+                    
+                    <h3 class="text-lg font-medium text-gray-600 mt-6">Steps</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Fork this repo</li>
+                        <li>Clone your fork</li>
+                        <li>Create a new branch (use a descriptive name)</li>
+                        <li>Make your changes</li>
+                        <li>Commit your changes</li>
+                        <li>Push to your fork</li>
+                        <li>Create a Pull Request</li>
+                    </ul>
+
+                    <h3 class="text-lg font-medium text-gray-600 mt-6">PR Requirements</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Describe your changes clearly.</li>
+                        <li>Link to related issues if applicable.</li>
+                        <li>Make sure your code follows the repo's style and includes tests if relevant.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-medium text-gray-600 mt-6">Tips</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Check for existing issues before opening new ones.</li>
+                        <li>Use clear commit messages.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-medium text-gray-600 mt-6">Labels</h3>
+                    <p><code class="bg-gray-100 p-1 rounded">good first issue</code>, 
+                       <code class="bg-gray-100 p-1 rounded">hacktoberfest</code>, 
+                       <code class="bg-gray-100 p-1 rounded">help wanted</code>
+                    </p>
+
+                    <p class="mt-8 text-center text-lg font-semibold text-indigo-600">Welcome to open source!</p>
+                </div>
+            `,
+
+            coc: () => `
+                <div class="markdown-content">
+                    <h1 class="text-3xl font-bold mb-4 text-gray-800">Code of Conduct</h1>
+                    <button onclick="renderPage('home')" class="mb-4 text-sm primary-link flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                        Back to Home
+                    </button>
+
+                    <h2 class="text-xl font-semibold text-gray-700">Our Pledge</h2>
+                    <p>We pledge to make participation in our project a harassment-free experience for everyone.</p>
+
+                    <h2 class="text-xl font-semibold text-gray-700">Our Standards</h2>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Use welcoming and inclusive language.</li>
+                        <li>Be respectful.</li>
+                        <li>Accept constructive criticism.</li>
+                    </ul>
+
+                    <h2 class="text-xl font-semibold text-gray-700">Enforcement</h2>
+                    <p>If you experience or witness unacceptable behavior, contact a repo maintainer.</p>
+                </div>
+            `
+        };
+
+        // Function to render the correct page content
+        function renderPage(pageName) {
+            const pageContentFunc = pageContents[pageName] || pageContents.home;
+            contentContainer.innerHTML = pageContentFunc();
+            
+            // Update the URL hash (optional, but good for back/forward buttons)
+            window.location.hash = pageName;
+            
+            // Re-bind the internal links after content injection
+            if (pageName === 'home') {
+                bindHomeLinks();
+            }
+        }
+
+        // Function to handle the specific links on the Home Page (now only handling internal links)
+        function bindHomeLinks() {
+            // Internal Link: CONTRIBUTING.md
+            const contributingLink = document.getElementById('contributing-link');
+            if (contributingLink) {
+                contributingLink.addEventListener('click', () => {
+                    renderPage('contributing');
+                });
+            }
+
+            // Internal Link: Code of Conduct
+            const cocLink = document.getElementById('coc-link');
+            if (cocLink) {
+                cocLink.addEventListener('click', () => {
+                    renderPage('coc');
+                });
+            }
+            
+            // External links (Hacktoberfest! and LICENSE) are now handled by standard <a href="..."> tags
+        }
+
+        // Initialize the page on load
+        window.onload = function() {
+            // Check hash for initial page load
+            const initialPage = window.location.hash.substring(1) || 'home';
+            renderPage(initialPage);
+        };
+        
+        // Handle back/forward navigation using the hash
+        window.onhashchange = function() {
+            const page = window.location.hash.substring(1) || 'home';
+            // Only re-render if the page is defined to avoid errors
+            if (pageContents[page]) {
+                renderPage(page);
+            }
+        };
+
+    </script>
+</body>
+</html>
