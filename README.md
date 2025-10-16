@@ -7,13 +7,14 @@ Welcome to the Hacktoberfest 2025 Placement Prep repository!
 This project is participating in [Hacktoberfest](https://hacktoberfest.com/)! All contributions are welcome. Please read the guidelines below to get started.
 
 ## 🚀 How to Contribute
-
-1. **Fork the repository**  
-2. **Clone your fork**  
-3. **Create a branch**  
-4. **Make your changes**  
-5. **Commit and push**  
-6. **Create a Pull Request**
+1. **Star the Repo**
+2. **Follow If You Want**
+3.  **Fork the repository**  
+4. **Clone your fork**  
+5. **Create a branch**  
+6. **Make your changes**  
+7. **Commit and push**  
+8. **Create a Pull Request**
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
